@@ -1,0 +1,9 @@
+name: hello-world
+on: push ##activity that will see what in this code when take the activity to change github
+jobs: ##define what will be done
+     hello-world-job: ##name of activity
+          runs-on: ubuntu-latest
+          steps:
+              - name: Check out repository code
+                uses: actions/checkout@v3
+              - run: echo "$(cat hello-world.txt)"
